@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Application de rédaction de conception</title>
+	<link rel="stylesheet" href="assets/css/reveal/reveal.css">
+	<link rel="stylesheet" href="assets/css/reveal/theme/white.css">
+	<link rel="stylesheet" href="assets/css/highlight-hybrid.css">
+	<link rel="stylesheet" href="assets/css/slideshow.css">
+	<style>
+	</style>
+	<!--  -->
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-markdown
+			data-separator="(^#HSLIDE$|^#HSLIDE\?.*)"
+			data-separator-vertical="(^#VSLIDE$|^#VSLIDE\?.*)"
+			data-separator-notes="^Presentation note:"
+			data-charset="utf-8">
+			<script type="text/template">
+				# Application de rédaction de conception
+#HSLIDE
+
+# CAHIER DES CHARGES
+#HSLIDE
+
+## QQOQCCP
+  • Qui ? Projet personnel. A destination de développeurs, chefs de projet, designers, intégrateurs etc
+  • Quoi ? Permettre une rédaction rapide d’une idée d’application
+  • Où ? Utilisation nomade
+  • Quand ? Principe évolutif : intérêt structurel dans un premier temps pour permettre de passer par un maximum d’étapes de conception, puis suggestif en proposant des notions de compatibilité entre des technos par exemples
+  • Comment ? Travail individuel, support et orientation d’un développeur confirmé si besoin. Méthode PDCA, utilisation des outils Gitlab
+  • Combien ? Aucune charge
+  • Pourquoi ? Besoin à pourvoir (sondage auprès de développeurs et collaborateurs, intérêt potentiel), équivalent à priori inexistant ou peu visible/utilisé
+
+#HSLIDE
+
+## Objectif
+Dans un premier temps, concevoir une première version stable et répondant à un concept de pense- bête/guide structuré à remplir, disponible sur mobile via le store Android.
+Dans un second temps, intégrer des composants permettant de suggérer des compatibilités – notions d’aide.
+
+#HSLIDE
+
+## Description fonctionnelle du besoin
+#VSLIDE
+
+### Fonctions :
+
+- Permettre à un utilisateur l’accès à une application
+- Cette application ne requerra pas de connexion à un réseau
+- L’utilisateur arrivera sur une page d’accueil présentant le logo de l’application le temps du chargement
+- L’application utilisera un principe de formulaires successifs pour définir
+le nom du projet
+les spécifications techniques et fonctionnelles
+les aspects marketing, UX/gamification etc.
+l’architecture et les technos utilisées
+- Export d’un fichier pouvant servir de support à une présentation rapide (format à définir)
+- Possibilité de sauvegarde sur Google Drive
+
+#VSLIDE
+
+### Contraintes :
+
+- Bien définir chaque partie de sorte que l’on puisse répondre à tout type de besoin
+- Concevoir un design adapté au mobile
+- Trouver une présentation originale et une articulation ludique
+
+
+			</script>
+		</section>
+	</div>
+</div>
+
+<script src="assets/js/reveal/reveal.js"></script>
+<script src="assets/js/reveal/lib/head.min.js"></script>
+<script src="assets/js/jquery.js"></script>
+<script>
+Reveal.initialize({
+	embedded: true,
+	margin: 0.0,
+	showNotes: false,
+	transition: 'slide',
+	autoSlide: 0,
+	loop: false,
+	center: true,
+	rtl: false,
+	shuffle: false,
+	mouseWheel: false,
+	history: true,
+
+	// disabled for now
+	// math: {
+	// 	mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+	// 	config: 'TeX-AMS_HTML-full'
+	// },
+
+	dependencies: [
+		{ src: "assets/js/reveal/plugin/markdown/marked.js"},
+		{ src: "assets/js/reveal/plugin/markdown/markdown.js"},
+		{ src: "assets/js/reveal/plugin/notes/notes.js"},
+		// { src: "assets/js/reveal/plugin/math/math.js", async: true }
+		{ src: "assets/js/reveal/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+	]
+});
+
+Reveal.configure({
+	keyboard: {
+		67: function() { // bind "s" key to "select" code block content
+
+		var currentSlide = Reveal.getCurrentSlide();
+		var preBlock = $(currentSlide).find("pre");
+
+		if(preBlock.length > 0) {
+
+			if (window.getSelection) {
+				var range = document.createRange();
+				range.selectNodeContents(preBlock[0]);
+				var selection = window.getSelection();
+				selection.removeAllRanges();
+				selection.addRange(range);
+			}
+		}
+	}
+}
+});
+
+</script>
+<script src="/socket.io/socket.io.js"></script><script>socket = io.connect();socket.on('reload', function() { location.reload(); });</script>
+</body>
+</html>

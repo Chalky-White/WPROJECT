@@ -1,0 +1,148 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Application de rédaction de conception - Web site</title>
+		<link rel="stylesheet" href="assets/css/highlight.min.css">
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/tipuesearch.css">
+		<link rel="stylesheet" href="assets/css/main.css">
+	</head>
+	<body>
+		<header class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="">Web site</a> <p class="navbar-text hidden-xs">Application de rédaction de conception</p>
+				</div>
+
+				<div class="collapse navbar-collapse" id="navbar-collapse-1">
+					<form action="search.html" class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" name="q" id="tipue_search_input" autocomplete="off" required class="form-control" placeholder="Search">
+						</div>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="CDC-slideshow.html" target="_blank">View as slideshow</a></li>
+						<!--li><a href="CDC-raw.html">View Markdown</a></li-->
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<!--
+<div class="toc">
+<p class="lead">Table of contents:</p>
+<p class="toc-1">
+<a href="#application-de-r-daction-de-conception">Application de rédaction de conception</a>
+</p>
+<p class="toc-1">
+<a href="#cahier-des-charges">CAHIER DES CHARGES</a>
+</p>
+<p class="toc-2">
+<a href="#qqoqccp">QQOQCCP</a>
+</p>
+<p class="toc-2">
+<a href="#objectif">Objectif</a>
+</p>
+<p class="toc-2">
+<a href="#description-fonctionnelle-du-besoin">Description fonctionnelle du besoin</a>
+</p>
+<p class="toc-3">
+<a href="#fonctions-">Fonctions :</a>
+</p>
+<p class="toc-3">
+<a href="#contraintes-">Contraintes :</a>
+</p>
+</div>
+-->
+
+		<div class="container">
+			<div class="row">
+				<nav id="sidebar" class="col-lg-2 col-sm-3">
+					<ul class="nav nav-pills nav-stacked">
+					</ul>
+					<!--
+Available versions:<br>
+raw<br>
+->CDC-raw.html<br>
+slideshow<br>
+->CDC-slideshow.html<br>
+default<br>
+->CDC.html<br>
+<br>
+Document informations:<br>
+CDC.md<br><br>
+active
+-->
+				</nav>
+				<header>
+					<div class="entry-meta text-right">
+
+					</div>
+				</header>
+				<article id="content" class="col-lg-10 col-sm-9">
+					<h1 id="application-de-r-daction-de-conception">Application de rédaction de conception</h1>
+<h1 id="cahier-des-charges">CAHIER DES CHARGES</h1>
+<h2 id="qqoqccp">QQOQCCP</h2>
+<p>  • Qui ? Projet personnel. A destination de développeurs, chefs de projet, designers, intégrateurs etc
+  • Quoi ? Permettre une rédaction rapide d’une idée d’application
+  • Où ? Utilisation nomade
+  • Quand ? Principe évolutif : intérêt structurel dans un premier temps pour permettre de passer par un maximum d’étapes de conception, puis suggestif en proposant des notions de compatibilité entre des technos par exemples
+  • Comment ? Travail individuel, support et orientation d’un développeur confirmé si besoin. Méthode PDCA, utilisation des outils Gitlab
+  • Combien ? Aucune charge
+  • Pourquoi ? Besoin à pourvoir (sondage auprès de développeurs et collaborateurs, intérêt potentiel), équivalent à priori inexistant ou peu visible/utilisé</p>
+<h2 id="objectif">Objectif</h2>
+<p>Dans un premier temps, concevoir une première version stable et répondant à un concept de pense- bête/guide structuré à remplir, disponible sur mobile via le store Android.
+Dans un second temps, intégrer des composants permettant de suggérer des compatibilités – notions d’aide.</p>
+<h2 id="description-fonctionnelle-du-besoin">Description fonctionnelle du besoin</h2>
+<h3 id="fonctions-">Fonctions :</h3>
+<ul>
+<li>Permettre à un utilisateur l’accès à une application</li>
+<li>Cette application ne requerra pas de connexion à un réseau</li>
+<li>L’utilisateur arrivera sur une page d’accueil présentant le logo de l’application le temps du chargement</li>
+<li>L’application utilisera un principe de formulaires successifs pour définir
+le nom du projet
+les spécifications techniques et fonctionnelles
+les aspects marketing, UX/gamification etc.
+l’architecture et les technos utilisées</li>
+<li>Export d’un fichier pouvant servir de support à une présentation rapide (format à définir)</li>
+<li>Possibilité de sauvegarde sur Google Drive</li>
+</ul>
+<h3 id="contraintes-">Contraintes :</h3>
+<ul>
+<li>Bien définir chaque partie de sorte que l’on puisse répondre à tout type de besoin</li>
+<li>Concevoir un design adapté au mobile</li>
+<li>Trouver une présentation originale et une articulation ludique</li>
+</ul>
+
+				</article>
+			</div>
+		</div>
+
+		<footer><a href="site-index.html">Pages index</a>
+</footer>
+
+		<script src="assets/js/jquery.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/highlight.min.js"></script>
+		<script src="assets/js/tipuesearch_set.js"></script>
+		<script src="assets/js/tipuesearch.min.js"></script>
+		<script>
+			$(function() {
+				hljs.initHighlightingOnLoad();
+				$('#tipue_search_input').tipuesearch({
+					mode: 'json',
+					contentLocation: 'index.json'
+				});
+			});
+		</script>
+		<script src="/socket.io/socket.io.js"></script><script>socket = io.connect();socket.on('reload', function() { location.reload(); });</script>
+		<!-- Generated by Vegetables from 'CDC.md' with format 'default' - '2018-1-30 10:14:28' -->
+	</body>
+</html>
