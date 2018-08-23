@@ -1,0 +1,52 @@
+<!--
+  Generated template for the NewProjectPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>New Project</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+  
+  <form [formGroup]="newProjectForm">
+
+      <ion-item>
+        <ion-label floating>Name</ion-label>
+        <ion-input [formControl]="newProjectForm.controls['projectName']"
+            type="projectName"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label floating>Concept</ion-label>
+        <ion-input [formControl]="newProjectForm.controls['projectConcept']"
+            type="projectConcept"></ion-input>
+      </ion-item>   
+    </form>
+
+      <ion-item>
+          <ion-label>Development Specifications</ion-label>
+          <ion-checkbox color="dark" checked="false"></ion-checkbox>
+        </ion-item>
+        
+        <ion-item>
+          <ion-label>Marketing Plan</ion-label>
+          <ion-checkbox color="dark" disabled="false"></ion-checkbox>
+        </ion-item>
+    
+      <ion-row>
+        <ion-col text-center>
+          <button ion-button class="create-button" block color="primary" (click)="goToProjectStatement()">
+            CREATE
+          </button>
+        </ion-col>
+      </ion-row>
+    
+
+
+
+  </ion-content>

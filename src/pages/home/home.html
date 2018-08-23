@@ -1,14 +1,23 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Let's start ! </ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+  
+      <button ion-button block (click)="goToNewProjectPage()">Créer un projet</button>
+
+      <ion-list>
+          <button ion-item (click)="itemSelected(item)">
+            {{ "item" }}
+            {{ "item" }}
+            {{ "item" }}
+          </button>  
+        </ion-list>
+  
+  </ion-content>
