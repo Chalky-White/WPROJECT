@@ -10,14 +10,15 @@
   
   <ion-content padding>
   
-      <button ion-button block (click)="goToNewProjectPage()">Créer un projet</button>
+      <button ion-button block (click)="goToNewProjectPage()"> <ion-icon name="add">  Créer un projet</ion-icon>  </button>
+      <ion-card>
+          <ion-card-header class="existing-projects">
+              Your Projects 
+            </ion-card-header>
 
-      <ion-list>
-          <button ion-item (click)="itemSelected(item)">
-            {{ "item" }}
-            {{ "item" }}
-            {{ "item" }}
-          </button>  
-        </ion-list>
-  
+      </ion-card>
+
   </ion-content>
+
+
+

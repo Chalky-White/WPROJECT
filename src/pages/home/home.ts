@@ -10,22 +10,25 @@ import { NewProjectPage } from '../new-project/new-project';
 })
 export class HomePage {
 
+
+  public existingProjects: Array<Object>;
+
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    public loadingCtrl: LoadingController) {
-
-  }
+    public loadingCtrl: LoadingController,
+    )
+     {}
 
   public goToConditions() {
     this.navCtrl.push(ConditionsPage);
   }
 
   public goToNewProjectPage() {
-    console.log("toto");
+
     this.navCtrl.push(NewProjectPage);
     this.presentLoading();
   }
-  
+
   presentLoading() {
     const loader = this.loadingCtrl.create({
       content: "Please wait...",
@@ -33,5 +36,9 @@ export class HomePage {
     });
     loader.present();
   }
+
+
+  
 }
+
 
