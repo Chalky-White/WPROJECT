@@ -26,7 +26,7 @@ export class PreHomeSliderPage {
 
     slides = [
       {
-        title: "Welcome in <br> Project RailRoad App !",
+        title: "Welcome in <br> Project RailRoad !",
         description: "The best way to help you in project conception, step by step",
         image: "../../assets/imgs/ProjectRR3.png",
       },
