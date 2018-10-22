@@ -18,7 +18,7 @@ export class NewProjectPage {
 
   newProjectForm : FormGroup;
 
-  constructor(public navCtrl: NavController, 
+  constructor(public navCtrl: NavController,
     public navParams: NavParams,
     public modalCtrl: ModalController,
     private formBuilder: FormBuilder) {
@@ -36,5 +36,9 @@ export class NewProjectPage {
   public goToProjectStatement() {
     this.navCtrl.push(ProjectStatementPage);
   }
-}
 
+    project = {}
+    logForm() {
+      console.log(this.project)
+    }
+}

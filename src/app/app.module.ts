@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule, ModalController } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SQLite } from '@ionic-native/sqlite';
 
@@ -12,17 +12,20 @@ import { NewProjectPageModule } from '../pages/new-project/new-project.module';
 import { NewProjectPage } from '../pages/new-project/new-project';
 import { ProjectStatementPage } from '../pages/project-statement/project-statement';
 import { ProjectStatementPageModule } from '../pages/project-statement/project-statement.module';
+import { PreHomeSliderPage } from '../pages/pre-home-slider/pre-home-slider';
+import { PreHomeSliderPageModule } from '../pages/pre-home-slider/pre-home-slider.module';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    HomePage
   ],
   imports: [
     BrowserModule,
     ConditionsPageModule,
     NewProjectPageModule,
     ProjectStatementPageModule,
+    PreHomeSliderPageModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -31,13 +34,13 @@ import { ProjectStatementPageModule } from '../pages/project-statement/project-s
     HomePage,
     ConditionsPage,
     NewProjectPage,
-    ProjectStatementPage
-
+    ProjectStatementPage,
+    PreHomeSliderPage
   ],
   providers: [
     StatusBar,
     SQLite,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

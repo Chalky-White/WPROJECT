@@ -1,24 +1,23 @@
-
 <ion-header>
 
-    <ion-navbar>
-      <ion-title>Let's start ! </ion-title>
-    </ion-navbar>
-  
-  </ion-header>
-  
-  
-  <ion-content padding>
-  
-      <button ion-button block (click)="goToNewProjectPage()"> <ion-icon name="add">  Créer un projet</ion-icon>  </button>
-      <ion-card>
-          <ion-card-header class="existing-projects">
-              Your Projects 
-            </ion-card-header>
+  <ion-navbar>
+    <ion-title>
+      <img src="../../assets/icon/ProjectRR2.ico"> <br>
+      Project Rail Road </ion-title>
+  </ion-navbar>
 
-      </ion-card>
-
-  </ion-content>
+</ion-header>
 
 
+<ion-content padding>
 
+  <button ion-button block (click)="goToNewProjectPage()">
+    <ion-icon name="add"> Create new project</ion-icon>
+  </button>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list>
+    <button ion-item *ngFor="let project of projects"(click)="projectSelected(project)">
+      {{ project }}
+    </button>
+  </ion-list>
+</ion-content>

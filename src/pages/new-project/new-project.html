@@ -12,41 +12,39 @@
 
 </ion-header>
 <ion-content padding>
-  
-  <form [formGroup]="newProjectForm">
 
-      <ion-item>
-        <ion-label floating>Name</ion-label>
-        <ion-input [formControl]="newProjectForm.controls['projectName']"
-            type="projectName"></ion-input>
-      </ion-item>
-      
-      <ion-item>
-        <ion-label floating>Concept</ion-label>
-        <ion-input [formControl]="newProjectForm.controls['projectConcept']"
-            type="projectConcept"></ion-input>
-      </ion-item>   
-    </form>
-
-      <ion-item>
-          <ion-label>Development Specifications</ion-label>
-          <ion-checkbox color="dark" checked="false"></ion-checkbox>
-        </ion-item>
-        
-        <ion-item>
-          <ion-label>Marketing Plan</ion-label>
-          <ion-checkbox color="dark" disabled="false"></ion-checkbox>
-        </ion-item>
-    
-      <ion-row>
-        <ion-col text-center>
-          <button ion-button class="create-button" block color="primary" (click)="goToProjectStatement()">
-            CREATE
-          </button>
-        </ion-col>
-      </ion-row>
-    
+  <form (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input type="text" [(ngModel)]="project.title" name="name"></ion-input>
+    </ion-item>
 
 
 
-  </ion-content>
+    <ion-item>
+      <ion-label>Concept</ion-label>
+      <ion-input type="text" [(ngModel)]="project.concept" name="concept"></ion-input>
+    </ion-item>
+
+  </form>
+
+  <ion-item>
+    <ion-label>Development Specifications</ion-label>
+    <ion-checkbox color="dark" checked="false"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Marketing Plan</ion-label>
+    <ion-checkbox color="dark" disabled="false"></ion-checkbox>
+  </ion-item>
+
+  <ion-row>
+    <ion-col text-center>
+      <button ion-button class="create-button" block color="primary" (click)="goToProjectStatement()">
+        CREATE
+      </button>
+    </ion-col>
+  </ion-row>
+  `,
+
+</ion-content>

@@ -10,6 +10,8 @@ import { NewProjectPage } from '../new-project/new-project';
 })
 export class HomePage {
 
+  projects: string[] = ['Projet1','Projet2','Projet3',]
+
 
   public existingProjects: Array<Object>;
 
@@ -24,7 +26,6 @@ export class HomePage {
   }
 
   public goToNewProjectPage() {
-
     this.navCtrl.push(NewProjectPage);
     this.presentLoading();
   }
@@ -32,7 +33,7 @@ export class HomePage {
   presentLoading() {
     const loader = this.loadingCtrl.create({
       content: "Please wait...",
-      duration: 1000
+      duration: 200
     });
     loader.present();
   }
@@ -40,5 +41,3 @@ export class HomePage {
 
   
 }
-
-
